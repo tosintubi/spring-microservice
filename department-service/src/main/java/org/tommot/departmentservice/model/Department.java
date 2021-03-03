@@ -15,7 +15,6 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class Department {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
