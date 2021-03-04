@@ -1,2 +1,16 @@
 server:
   port: 9002
+
+#MySql Configuration
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/employeemanager
+    username: root
+    password: dogood1!
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  jooq:
+    sql-dialect: org.hibernate.dialect.MySQL5Dialect
