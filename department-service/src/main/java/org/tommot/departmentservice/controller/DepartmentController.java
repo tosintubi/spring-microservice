@@ -28,9 +28,7 @@ public class DepartmentController {
 
     @PostMapping("/add")
     public ResponseEntity<Department> saveDepartment(@RequestBody Department department){
-        log.info("Implementing: saveDepartment");
-        Department newDepartment = departmentService.saveDepartment(department);
-        return new ResponseEntity<>(newDepartment, HttpStatus.CREATED);
+
     }
 
     @GetMapping("/")
