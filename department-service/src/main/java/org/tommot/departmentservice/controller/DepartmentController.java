@@ -28,7 +28,8 @@ public class DepartmentController {
 
     @PostMapping("/add")
     public ResponseEntity<Department> saveDepartment(@RequestBody Department department){
-
+        Department newDepartment = departmentService.saveDepartment(department);
+        return new ResponseEntity<>(newDepartment, HttpStatus.CREATED);
     }
 
     @GetMapping("/")

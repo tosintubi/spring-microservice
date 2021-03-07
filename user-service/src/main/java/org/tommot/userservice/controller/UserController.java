@@ -13,7 +13,7 @@ import org.tommot.userservice.service.UserService;
 @RestController
 @RequestMapping("/users")
 @Slf4j
-public class UserController {
+public class  UserController {
 
     private UserService userService;
 
