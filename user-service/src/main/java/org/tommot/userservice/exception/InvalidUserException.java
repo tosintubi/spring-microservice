@@ -1,4 +1,7 @@
 package org.tommot.userservice.exception;
 
-public class InvalidUserException {
+public class InvalidUserException  extends RuntimeException {
+    public InvalidUserException(String message) {
+        super(message);
+    }
 }
