@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.tommot.projectservice.exception.ProjectNotFoundException;
 import org.tommot.projectservice.model.Project;
 import org.tommot.projectservice.repository.ProjectRepository;
 
@@ -32,6 +33,7 @@ public class ProjectService {
 
     public Project findProjectWithId(Long id) {
         log.info("Implementing Service: ProjectService.saveProject");
-        return  projectRepository.findById(id).orElseThrow(new );
+        return  projectRepository.findById(id).orElseThrow(()->
+                new ProjectNotFoundException("Project with id: "+ " could not be found"));
     }
 }
