@@ -1,5 +1,7 @@
 package org.tommot.userservice.service;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,8 @@ import org.tommot.userservice.repository.UserRepository;
 
 @Service
 @Slf4j
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserService {
 
     @Autowired
