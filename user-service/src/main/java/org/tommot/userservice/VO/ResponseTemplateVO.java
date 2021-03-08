@@ -11,4 +11,5 @@ import org.tommot.userservice.model.User;
 public class ResponseTemplateVO {
     private User user;
     private Department department;
+    private Project project;
 }
