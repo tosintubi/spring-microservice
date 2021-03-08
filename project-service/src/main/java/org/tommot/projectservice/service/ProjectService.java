@@ -9,6 +9,7 @@ import org.tommot.projectservice.model.Project;
 import org.tommot.projectservice.repository.ProjectRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @NoArgsConstructor
@@ -27,5 +28,10 @@ public class ProjectService {
     public List<Project> findAllProjects() {
         log.info("Implementing Service: ProjectService.saveProject");
         return projectRepository.findAll();
+    }
+
+    public Project findProjectWithId(Long id) {
+        log.info("Implementing Service: ProjectService.saveProject");
+        return  projectRepository.findById(id).orElseThrow(new );
     }
 }
