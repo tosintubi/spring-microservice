@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.tommot.projectservice.model.Project;
 import org.tommot.projectservice.repository.ProjectRepository;
 
+import java.util.List;
+
 @Service
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,5 +23,10 @@ public class ProjectService {
     public Project saveProject(Project project) {
         log.info("Implementing Service: ProjectService.saveProject");
         return projectRepository.save(project);
+    }
+
+    public List<Project> findAllProjects() {
+        log.info("Implementing Service: ProjectService.saveProject");
+        return projectRepository.findAll();
     }
 }
