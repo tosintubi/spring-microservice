@@ -35,4 +35,10 @@ public class ProjectController {
         return  new ResponseEntity<>(projectList, HttpStatus.OK);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Project> getProjectWithId( @PathVariable("id") String id){
+        log.info("Implementing: ProjectController.getProjectWithId");
+        Project project = projectService.findProjectWithId(id);
+        return new ResponseEntity<>(project, HttpStatus.OK);
+    }
 }
