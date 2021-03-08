@@ -1,0 +1,25 @@
+package org.tommot.projectservice.service;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.tommot.projectservice.model.Project;
+import org.tommot.projectservice.repository.ProjectRepository;
+
+@Service
+@NoArgsConstructor
+@AllArgsConstructor
+@Slf4j
+public class ProjectService {
+
+    @Autowired
+    private ProjectRepository projectRepository;
+
+    public Project saveProject(Project project) {
+        log.info("Implementing Service: ProjectService.saveProject");
+        return projectRepository.save(project);
+    }
+}
