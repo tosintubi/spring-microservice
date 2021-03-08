@@ -20,6 +20,6 @@ public class Project {
     private Long id;
     private String projectCode;
     private String projectTitle;
-    private String Location;
+    private String projectLocation;
 
 }
