@@ -1,2 +1,15 @@
 server:
   port: 9000
+
+
+  spring:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/project_service
+      username:
+      password:
+    jpa:
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
