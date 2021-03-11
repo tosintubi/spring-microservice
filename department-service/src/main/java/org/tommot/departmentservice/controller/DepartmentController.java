@@ -19,10 +19,10 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-    @GetMapping("/hello")
+    @GetMapping("/testapi")
     public String hello() {
         log.info("Implementing: hello()");
-        return "hello world";
+        return "Works!";
     }
 
 
