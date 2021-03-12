@@ -24,6 +24,7 @@ public class  UserController {
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
+    // Fetch user with their departments
     @GetMapping("/{id}")
     public ResponseTemplateVO getUserWithDepartment(@PathVariable("id") Long userId){
         log.info("Implementing: getUserWithDepartment");
