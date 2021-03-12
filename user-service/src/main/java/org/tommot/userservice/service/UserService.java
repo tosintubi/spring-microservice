@@ -30,7 +30,8 @@ public class UserService {
     }
 
     public ResponseTemplateVO getUserWithDepartment(Long userId) {
-        log.info("Implementing Service: UserService.getUserWithDepartment");
+        log.info("Service: UserService.getUserWithDepartment");
+
         ResponseTemplateVO responseTemplateVO = new ResponseTemplateVO();
         User user = userRepository.findUserById(userId);
 
