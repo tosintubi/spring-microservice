@@ -14,3 +14,8 @@ spring:
 
   jooq:
     sql-dialect: org.hibernate.dialect.MySQL5Dialect
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
