@@ -3,6 +3,9 @@ server:
 
 #MySql Configuration
 spring:
+  application:
+    name: USER-SERVICE
+
   datasource:
     url: jdbc:mysql://localhost:3306/user_service
     username: root
@@ -14,6 +17,7 @@ spring:
 
   jooq:
     sql-dialect: org.hibernate.dialect.MySQL5Dialect
+
 
 eureka:
   client:
