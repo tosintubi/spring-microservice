@@ -1,7 +1,7 @@
 server:
   port: 9002
 
-#MySql Configuration
+
 spring:
   application:
     name: USER-SERVICE
