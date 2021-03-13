@@ -2,17 +2,22 @@ server:
   port: 9001
 
 spring:
+  application:
+    name: DEPARTMENT-SERVICE
 
   datasource:
     url: jdbc:postgresql://localhost:5432/department_service
     username:
     password:
+
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
 
 
 eureka:
