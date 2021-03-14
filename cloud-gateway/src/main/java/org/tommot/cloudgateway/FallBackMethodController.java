@@ -12,13 +12,13 @@ public class FallBackMethodController {
         return "User service is taking longer than expected. Please try again later";
     }
 
-    @GetMapping("/projectServiceFallBack")
-    public String projectServiceFallBack(){
-        return "Project service is taking longer than expected. Please try again later";
-    }
-
     @GetMapping("/departmentServiceFallBack")
     public String departmentServiceFallBack(){
         return "Department service is taking longer than expected. Please try again later";
+    }
+
+    @GetMapping("/projectServiceFallBack")
+    public String projectServiceFallBack(){
+        return "Project service is taking longer than expected. Please try again later";
     }
 }
