@@ -26,7 +26,7 @@ public class  UserController {
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
-    @GetMapping("/all")
+    @GetMapping({"/all","/"})
     public ResponseEntity<List<User>> getAllUsers(){
         log.info("Implementing: getAllDepartments");
         List<User> users = userService.findAllUsers();
