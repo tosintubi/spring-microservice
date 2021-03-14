@@ -12,7 +12,7 @@ import org.tommot.userservice.service.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/v1/users")
 @Slf4j
 public class  UserController {
 
