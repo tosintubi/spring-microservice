@@ -19,9 +19,9 @@ spring:
             - Path=/departments/**
 
         - id: PROJECT-SERVICE
-            uri: lb://PROJECT-SERVICE
-            predicates:
-              - Path=/projects/**
+          uri: lb://PROJECT-SERVICE
+          predicates:
+            - Path=/projects/**
 eureka:
   client:
     register-with-eureka: true
