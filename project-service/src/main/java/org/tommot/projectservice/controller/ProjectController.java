@@ -26,10 +26,9 @@ public class ProjectController {
         log.info("Implementing: ProjectController.saveProject");
         Project newProject =  projectService.saveProject(project);
         return  new ResponseEntity<>(newProject, HttpStatus.CREATED);
-
     }
 
-    @GetMapping("/all")
+    @GetMapping({"/all","/"})
     public ResponseEntity<List<Project>> getProjects(){
         log.info("Implementing: ProjectController.getProjects");
         List<Project> projectList = projectService.findAllProjects();
