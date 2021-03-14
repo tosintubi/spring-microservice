@@ -1,7 +1,6 @@
 server:
   port: 9000
 
-
 spring:
   application:
     name: API-GATEWAY
@@ -38,6 +37,18 @@ spring:
               args:
                 name: PROJECT-SERVICE
                 fallbackuri: forward:/projectServiceFallBack
+
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+
+
+
 eureka:
   client:
     register-with-eureka: true
