@@ -47,8 +47,6 @@ hystrix:
           thread:
             timeoutInMilliseconds: 4000
 
-
-
 eureka:
   client:
     register-with-eureka: true
@@ -58,3 +56,8 @@ eureka:
   instance:
     hostname: localhost
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
