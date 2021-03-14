@@ -9,6 +9,8 @@ import org.tommot.userservice.VO.ResponseTemplateVO;
 import org.tommot.userservice.model.User;
 import org.tommot.userservice.service.UserService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/users")
 @Slf4j
@@ -23,6 +25,13 @@ public class  UserController {
         User newUser = userService.saveUser(user);
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<User>> getAllUsers(){
+        log.info("Implementing: getAllDepartments");
+        List<User> users = userService.findAllUsers();
+        return new ResponseEntity<>(users, HttpStatus.OK);}
+
 
     // Fetch user with their departments
     @GetMapping("/{id}")

@@ -12,6 +12,8 @@ import org.tommot.userservice.VO.ResponseTemplateVO;
 import org.tommot.userservice.model.User;
 import org.tommot.userservice.repository.UserRepository;
 
+import java.util.List;
+
 @Service
 @Slf4j
 @NoArgsConstructor
@@ -46,5 +48,10 @@ public class UserService {
         responseTemplateVO.setProject(project);
         return  responseTemplateVO;
 
+    }
+
+    public List<User> findAllUsers() {
+        log.info("Service: UserService.getUserWithDepartment");
+        return userRepository.findAll();
     }
 }
