@@ -11,17 +11,17 @@ spring:
         - id: USER-SERVICE
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/users/**
+            - Path=/api/v1/users/**
 
         - id: DEPARTMENT-SERVICE
           uri: lb://DEPARTMENT-SERVICE
           predicates:
-            - Path=/departments/**
+            - Path=/api/v1/departments/**
 
         - id: PROJECT-SERVICE
           uri: lb://PROJECT-SERVICE
           predicates:
-            - Path=/projects/**
+            - Path=/api/v1/projects/**
 eureka:
   client:
     register-with-eureka: true
