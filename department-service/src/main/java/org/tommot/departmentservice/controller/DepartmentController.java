@@ -26,13 +26,13 @@ public class DepartmentController {
     }
 
 
-    @PostMapping("/add")
+    @PostMapping("/add/")
     public ResponseEntity<Department> saveDepartment(@RequestBody Department department){
         Department newDepartment = departmentService.saveDepartment(department);
         return new ResponseEntity<>(newDepartment, HttpStatus.CREATED);
     }
 
-    @GetMapping("/")
+    @GetMapping({"/","/all"})
     public ResponseEntity<List<Department>> getAllDepartments(){
         log.info("Implementing: getAllDepartments");
         List<Department> departments = departmentService.findAllDepartments();
