@@ -12,16 +12,32 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/v1/users/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: USER-SERVICE
+                fallbackuri: forward:/userServiceFallBack
+
 
         - id: DEPARTMENT-SERVICE
           uri: lb://DEPARTMENT-SERVICE
           predicates:
             - Path=/api/v1/departments/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: DEPARTMENT-SERVICE
+                fallbackuri: forward:/departmentServiceFallBack
 
         - id: PROJECT-SERVICE
           uri: lb://PROJECT-SERVICE
           predicates:
             - Path=/api/v1/projects/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: PROJECT-SERVICE
+                fallbackuri: forward:/projectServiceFallBack
 eureka:
   client:
     register-with-eureka: true
