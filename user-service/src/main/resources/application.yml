@@ -10,6 +10,7 @@ spring:
     url: jdbc:mysql://localhost:3306/user_service
     username: root
     password: dogood1!
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,6 +18,11 @@ spring:
 
   jooq:
     sql-dialect: org.hibernate.dialect.MySQL5Dialect
+
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:9296
 
 
 eureka:
