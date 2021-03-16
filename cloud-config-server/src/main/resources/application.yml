@@ -10,3 +10,4 @@ spring:
       server:
         git:
           clone-on-start: true
+          uri: https://github.com/tosintubi/microservice-config-server
