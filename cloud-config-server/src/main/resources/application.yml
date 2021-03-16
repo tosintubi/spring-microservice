@@ -9,5 +9,7 @@ spring:
     config:
       server:
         git:
-          clone-on-start: true
           uri: https://github.com/tosintubi/microservice-config-server
+          clone-on-start: true
+  profiles:
+    active: native
