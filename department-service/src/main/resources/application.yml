@@ -5,10 +5,6 @@ spring:
   application:
     name: DEPARTMENT-SERVICE
 
-  cloud:
-    config:
-      enabled: true
-      uri: http://localhost:9296
 
   datasource:
     url: jdbc:postgresql://localhost:5432/department_service
@@ -21,13 +17,3 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
-  instance:
-    hostname: localhost
