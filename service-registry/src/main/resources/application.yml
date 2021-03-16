@@ -5,3 +5,8 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+
+    cloud:
+      config:
+        enabled: true
+        uri: http://localhost:9296

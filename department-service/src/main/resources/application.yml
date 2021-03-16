@@ -5,6 +5,11 @@ spring:
   application:
     name: DEPARTMENT-SERVICE
 
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:9296
+
   datasource:
     url: jdbc:postgresql://localhost:5432/department_service
     username:
