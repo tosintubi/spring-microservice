@@ -32,7 +32,7 @@ public class DepartmentController {
         return new ResponseEntity<>(newDepartment, HttpStatus.CREATED);
     }
 
-    @GetMapping({"/","/all"})
+    @GetMapping({"/"})
     public ResponseEntity<List<Department>> getAllDepartments(){
         log.info("Implementing: getAllDepartments");
         List<Department> departments = departmentService.findAllDepartments();
