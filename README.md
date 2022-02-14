@@ -1,1 +1,1 @@
-# spring-microservice
+# Demonstrating Spring microservices.
